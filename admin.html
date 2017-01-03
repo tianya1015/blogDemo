@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>博客</title>
+    <link rel="stylesheet" href="dist/styles.css">
+    <script type="text/javascript" src="http://cdn.bamastatic.com/js/lib/jquery-2.1.1.min.js"></script>
+  </head>
+  <body>
+    <div class="">管理后台</div>
+    <div class="">
+      <a id="click" href="javascript:;">点击</a>
+    </div>
+    <div id="blog" style="height: 100%">
+      <my-canvas></my-canvas>
+      <spinner v-show="isLoading"></spinner>
+      <Toast v-show="isToasting"></Toast>
+      <router-view ></router-view>
+    </div>
+
+    <script type="text/javascript">
+      $(function(){
+          $('#click').on('click',function(){
+            alert('管理后台');
+          });
+      });
+    </script>
+  </body>
+</html>
